@@ -1,0 +1,186 @@
+/* Pagina index */
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(rgb(148, 0, 0),rgb(23, 0, 97));
+    height: 100vh;
+}
+
+.log{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.cont{
+    text-align: center;
+    position: relative;
+    height: 100vh;
+}
+
+.box1{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 80px;
+    width: 100%;
+}
+
+#b{
+    color: #15151598;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.418);
+    margin-right: 20px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:900px){
+    .box1{
+        font-size: 80px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 50px;
+    }
+    #b{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 12px;
+        padding: 10px;
+    }    
+
+    .txt{
+        margin-left: -25px;
+    }
+}
+
+@media screen and (max-width:600px){
+    
+    #b{
+        margin: 0 auto;
+        padding: 5px;
+        margin-left: 8px;
+    }
+
+    .table{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-left: 40px;
+        border-top: transparent;
+    }
+    .buttonN{
+        margin-top: 81px;
+        width: 200px;
+        margin: 2px auto;
+        text-align: center;
+    }
+}
+
+/* Pagina Asistente */
+
+.container{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    /* height: 100vh; */
+}
+
+.form-group{
+    display: flex;
+    background-color: purple;
+}
+
+.btn{
+    background-color: rgba(0, 110, 255, 0.657);
+    margin-left: 15px;
+    margin-top: 78px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    position: relative;
+}
+
+#mute{
+    background-color: rgba(255, 0, 0, 0.602);
+}
+
+.form-control{
+    border: none;
+    outline: none;
+    background-color: #0000006b;
+    width: 100%;
+    position: absolute;
+    padding: 5px;
+    color: rgba(0, 255, 255, 0.698);
+    font-size: 18px;
+    height: 20px;
+    margin-top: 200px;
+    resize: none;
+}
+
+#texto{
+    padding: 10px;
+    color: rgba(0, 255, 179, 0.548);
+    height: 100px;
+    position: relative;
+}
+
+.buttonN{
+    cursor: pointer;
+    background-color: rgba(1, 40, 149, 0.404);
+    padding: 20px;
+    width: 60px;
+    margin-left: 15px;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.table{
+    padding: 5px;
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width:900px){
+    .table{
+        display: flex;
+        flex-direction: row;
+        width: 730px;
+    }
+    .txt{
+        margin-left: 5px;
+        background-color: red;
+    }
+}
+
+@media screen and (max-width:600px){
+    
+}
+
+.txt{
+    background-color: #0000006b;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    width: 300px;
+    outline: none;
+    color: white;
+    height: 50px;
+    padding: 10px;
+    letter-spacing: 2px;
+    resize: none;
+}

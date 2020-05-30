@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voz a texto</title>
+    <link rel="shortcut icon" href="LogoWhite.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+            <textarea placeholder="Ahora puedes empezar a hablar" name="comando" id="texto" class="form-control">
+
+            </textarea>
+
+                <div class="table">
+
+                    <div class="buttonN" id="normal">Copiar</div>
+                    <a class="buttonN" id="volver" href="index.html">Volver</a>
+                    <div class="buttonN" id="limpiar">Limpiar</div>
+
+                </div>
+        
+    </div>
+
+    <script src="voztext.js"></script>
+    <script src="copiar.js"></script>
+    <script type="text/javascript">
+        let limpiar = document.getElementById('limpiar');
+        let texto = document.getElementbyId('texto');
+
+        limpiar.addEventListener('click', clean);
+
+        function clean(){
+            texto.value='';
+        }
+    </script>
+</body>
+</html>
