@@ -22,19 +22,21 @@ body{
 .box1{
     position: absolute;
     bottom: 0;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     width: 100%;
+    background-color: red;
 }
 
 #b{
     color: #15151598;
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.418);
-    margin-right: 20px;
+    position: absolute;
+    right: 0;
+    margin-right: 100px;
     padding: 20px;
     cursor: pointer;
 }
-
 
 @media screen and (max-width:900px){
     .box1{
@@ -65,17 +67,21 @@ body{
     }
 
     .table{
+
+        padding: 5px;
+        position: absolute;
+        width: 200px;
+        padding: 10px;
         display: flex;
-        flex-direction: column;
-        width: 50%;
-        margin-left: 40px;
-        border-top: transparent;
+        flex-direction: row;
     }
     .buttonN{
         margin-top: 81px;
         width: 200px;
         margin: 2px auto;
         text-align: center;
+        position: relative;
+        margin-right: 20px;
     }
 }
 
@@ -85,29 +91,10 @@ body{
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    bottom: 0;
+    top: 0;
     position: relative;
-    /* height: 100vh; */
-}
-
-.form-group{
-    display: flex;
-    background-color: purple;
-}
-
-.btn{
-    background-color: rgba(0, 110, 255, 0.657);
-    margin-left: 15px;
-    margin-top: 78px;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    position: relative;
-}
-
-#mute{
-    background-color: rgba(255, 0, 0, 0.602);
+    height: 100vh;
 }
 
 .form-control{
@@ -140,6 +127,10 @@ body{
     color: white;
 }
 
+.buttonN::selection{
+    background-color: transparent;
+}
+
 a{
     text-decoration: none;
 }
@@ -162,10 +153,6 @@ a{
         margin-left: 5px;
         background-color: red;
     }
-}
-
-@media screen and (max-width:600px){
-    
 }
 
 .txt{

@@ -1,20 +1,13 @@
 if(annyang){
-    var voices;
-
-    var utter = new SpeechSynthesisUtterance();
-    utter.rate = 1;
-    utter.pitch = 0.5;
-    utter.lang = 'es-ES';
-
-    //Cargamos las voces que tenemos en nuestro sistema
-    window.speechSynthesis.onvoiceschanged = function (){
-        voices = window.speechSynthesis.getVoices();
-        console.log(voices);
-    }
-
     var commands = {
-        "youtube": function(){
+        "hola": function(){
             document.getElementById('txt').innerHTML="Hola, ¿como estas? me llamo 3CMG ASIST";
+        },
+        "cerrar": function(){
+            window.close();
+        },
+        "te": function(){
+            window.open('https://www.youtube.com/');
         },
 
         "limpiar" :function(){
@@ -24,7 +17,8 @@ if(annyang){
 
     //Añadir comandos a annyang
     annyang.addCommands(commands);
+    annyang.setLanguage('es-ES');
 
     //Empezar a escuchar
-    annyang.start({autoRestart: false, continuous: true});
+    annyang.start();
 }

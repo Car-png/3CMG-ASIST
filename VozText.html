@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-            <textarea placeholder="Ahora puedes empezar a hablar" name="comando" id="texto" class="form-control">
+            <textarea id="texto" class="form-control" disabled>
 
             </textarea>
 
@@ -17,7 +17,6 @@
 
                     <div class="buttonN" id="normal">Copiar</div>
                     <a class="buttonN" id="volver" href="index.html">Volver</a>
-                    <div class="buttonN" id="limpiar">Limpiar</div>
 
                 </div>
         
@@ -25,15 +24,6 @@
 
     <script src="voztext.js"></script>
     <script src="copiar.js"></script>
-    <script type="text/javascript">
-        let limpiar = document.getElementById('limpiar');
-        let texto = document.getElementbyId('texto');
-
-        limpiar.addEventListener('click', clean);
-
-        function clean(){
-            texto.value='';
-        }
     </script>
 </body>
 </html>
