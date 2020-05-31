@@ -41,6 +41,18 @@ if(annyang){
         },
         'insta': function(){
             window.open('https://www.instagram.com/','blank_');
+        },
+        'horalarga': function(){
+            document.getElementById('txt').innerHTML= d.getHours()+d.getMinutes()+d.getSeconds();
+        },
+        'horacorta':function(){
+            document.getElementById('txt').innerHTML= d.getHours()+d.getMinutes();
+        },
+        'fechalarga':function(){
+            document.getElementById('txt').innerHTML= d.getDate()+d.getDay()+d.getMonth()+d.getFullYear();
+        },        
+        'fechalarga':function(){
+            document.getElementById('txt').innerHTML= d.getDay()+d.getMonth()+d.getFullYear();
         }
 
     };
@@ -70,3 +82,7 @@ function Cancelar(){
     let c = document.getElementById('batC').open;
     return c;
 }
+
+
+
+var d = new Date();
