@@ -2,12 +2,9 @@ if(annyang){
     var commands = {
 
         'buscar *valor': function(valor){
-            $('#txt').val(valor);
+            document.getElementById('txt').innerHTML="Buscando "+$('#txt').val(valor);
             window.open('https://www.google.com/search?sxsrf=ALeKk02R3u6nWG1-FvkdLQFKMlHZOGg36Q%3A1590901089781&source=hp&ei=YTnTXsO-LbvQ5OUPibiA6Ao&q='+valor+'','_blank');
             
-        },
-        'cerrar':function(){
-            window.close();
         },
 
         'apagarpc': Apagar(),
@@ -18,40 +15,44 @@ if(annyang){
         'youtube': function(){
             window.open('https://www.youtube.com/','_blank');
         },
+        'adios youtube':function(){
+            window.close('https://www.youtube.com/');
+        },
+
         'face': function(){
-            window.open('https://www.facebook.com/','blank_');
+            window.open('https://www.facebook.com/','_blank');
         },
         'facebook': function(){
-            window.open('https://www.facebook.com/','blank_');
+            window.open('https://www.facebook.com/','_blank');
         },
         'messenger': function(){
-            window.open('https://www.messenger.com/','blank_');
+            window.open('https://www.messenger.com/','_blank');
         },
         'twitter': function(){
-            window.open('https://twitter.com/explore','blank_');
+            window.open('https://twitter.com/explore','_blank');
         },
         'gmail': function(){
-            window.open('https://mail.google.com/','blanc_');
+            window.open('https://mail.google.com/','_blank');
         },
         'twitch': function(){
-            window.open('https://www.twitch.tv/','blank_');
+            window.open('https://www.twitch.tv/','_blank');
         },
         'instagram': function(){
-            window.open('https://www.instagram.com/','blank_');
+            window.open('https://www.instagram.com/','_blank');
         },
         'insta': function(){
-            window.open('https://www.instagram.com/','blank_');
+            window.open('https://www.instagram.com/','_blank');
         },
-        'horalarga': function(){
+        'hora larga': function(){
             document.getElementById('txt').innerHTML= document.getElementById('txt').innerHTML.getHours()+document.getElementById('txt').innerHTML.getMinutes()+document.getElementById('txt').innerHTML.getSeconds();
         },
-        'horacorta':function(){
+        'hora corta':function(){
             document.getElementById('txt').innerHTML= document.getElementById('txt').innerHTML.getHours()+document.getElementById('txt').innerHTML.getMinutes();
         },
-        'fechalarga':function(){
+        'fecha larga':function(){
             document.getElementById('txt').innerHTML= document.getElementById('txt').innerHTML.getDate()+document.getElementById('txt').innerHTML.getDay()+document.getElementById('txt').innerHTML.getMonth()+document.getElementById('txt').innerHTML.getFullYear();
         },        
-        'fechacorta':function(){
+        'fecha corta':function(){
             document.getElementById('txt').innerHTML= document.getElementById('txt').innerHTML.getDay()+document.getElementById('txt').innerHTML.getMonth()+document.getElementById('txt').innerHTML.getFullYear();
         }
 
