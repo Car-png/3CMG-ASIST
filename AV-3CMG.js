@@ -51,7 +51,7 @@ if(annyang){
         'fechalarga':function(){
             document.getElementById('txt').innerHTML= d.getDate()+d.getDay()+d.getMonth()+d.getFullYear();
         },        
-        'fechalarga':function(){
+        'fechacorta':function(){
             document.getElementById('txt').innerHTML= d.getDay()+d.getMonth()+d.getFullYear();
         }
 
@@ -85,4 +85,6 @@ function Cancelar(){
 
 
 
-var d = new Date();
+var d = document.getElementById('txt');
+
+d = new Date();
