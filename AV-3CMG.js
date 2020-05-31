@@ -8,6 +8,9 @@ if(annyang){
         },
         'texto': function(){
             window.open('VozText.html','_blank');
+        },
+        'Cerrar':function(){
+            window.close();
         }
     };
 
