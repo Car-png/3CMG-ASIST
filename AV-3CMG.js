@@ -43,16 +43,16 @@ if(annyang){
             window.open('https://www.instagram.com/','blank_');
         },
         'horalarga': function(){
-            document.getElementById('txt').innerHTML= d.getHours()+d.getMinutes()+d.getSeconds();
+            document.getElementById('txt').innerHTML= document.getElementById('txt').innerHTML.getHours()+document.getElementById('txt').innerHTML.getMinutes()+document.getElementById('txt').innerHTML.getSeconds();
         },
         'horacorta':function(){
-            document.getElementById('txt').innerHTML= d.getHours()+d.getMinutes();
+            document.getElementById('txt').innerHTML= document.getElementById('txt').innerHTML.getHours()+document.getElementById('txt').innerHTML.getMinutes();
         },
         'fechalarga':function(){
-            document.getElementById('txt').innerHTML= d.getDate()+d.getDay()+d.getMonth()+d.getFullYear();
+            document.getElementById('txt').innerHTML= document.getElementById('txt').innerHTML.getDate()+document.getElementById('txt').innerHTML.getDay()+document.getElementById('txt').innerHTML.getMonth()+document.getElementById('txt').innerHTML.getFullYear();
         },        
         'fechacorta':function(){
-            document.getElementById('txt').innerHTML= d.getDay()+d.getMonth()+d.getFullYear();
+            document.getElementById('txt').innerHTML= document.getElementById('txt').innerHTML.getDay()+document.getElementById('txt').innerHTML.getMonth()+document.getElementById('txt').innerHTML.getFullYear();
         }
 
     };
@@ -85,6 +85,4 @@ function Cancelar(){
 
 
 
-var d = document.getElementById('txt');
-
-d = new Date();
+document.getElementById('txt') = new Date();
