@@ -199,6 +199,10 @@ h1::selection, p::selection, label::selection, .Copiar::selection{
 	align-items: center;
 	text-align: justify;
 }
+.ej{
+    width: 100%;
+    margin-top: 5px;
+}
 
 .hours{
 	display: flex;
@@ -215,8 +219,18 @@ p, label{
 	font-family: 'FTheLast';
 	color: rgba(255, 255, 255, 0.521);
 }
+p{
+    font-size: 16px;
+}
+.let{
+    font-size: 10px;
+    font-family: 'FTheLast';
+    margin: 8px;
+}
 
-
+b{
+    color: rgb(0, 0, 0);
+}
 
 
 
