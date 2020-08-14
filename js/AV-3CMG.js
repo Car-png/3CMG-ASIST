@@ -9,8 +9,8 @@ if(annyang){
 
     window.speechSynthesis.onvoiceschanged = function (){
         voices = window.speechSynthesis.getVoices();
-        console.log(voices);  
-    };
+        console.log(voices);
+        };
 
     var commands = {
 
@@ -38,11 +38,11 @@ if(annyang){
             window.open('https://www.google.com/search?sxsrf=ALeKk02R3u6nWG1-FvkdLQFKMlHZOGg36Q%3A1590901089781&source=hp&ei=YTnTXsO-LbvQ5OUPibiA6Ao&q='+valor+'','_blank');
         },
         'youtube': function(){
-            utter.text = 'Visitando '+valor;
+            utter.text = 'Visitando youtube';
             utter.voice = voices[7];
             window.speechSynthesis.speak(utter);
 
-            document.getElementById('txt').innerHTML="Visitando youtube"+$('#txt').val(valor);
+            document.getElementById('txt').innerHTML="Visitando youtube";
             window.open('https://www.youtube.com/','_blank');
         },
 
@@ -71,37 +71,7 @@ if(annyang){
             document.getElementById('txt').innerHTML="Visitando "+$('#txt').val(valor);
             window.open('https://www.'+valor+'.com/','_blank');
             
-        },
-
-        'hora': function () {
-            
         }
-
-
-        // 'face': function(){
-        //     window.open('https://www.facebook.com/','_blank');
-        // },
-        // 'facebook': function(){
-        //     window.open('https://www.facebook.com/','_blank');
-        // },
-        // 'messenger': function(){
-        //     window.open('https://www.messenger.com/','_blank');
-        // },
-        // 'twitter': function(){
-        //     window.open('https://twitter.com/explore','_blank');
-        // },
-        // 'gmail': function(){
-        //     window.open('https://mail.google.com/','_blank');
-        // },
-        // 'twitch': function(){
-        //     window.open('https://www.twitch.tv/','_blank');
-        // },
-        // 'instagram': function(){
-        //     window.open('https://www.instagram.com/','_blank');
-        // },
-        // 'insta': function(){
-        //     window.open('https://www.instagram.com/','_blank');
-        // }
 
     };
 
