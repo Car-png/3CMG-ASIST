@@ -1,0 +1,115 @@
+.clock{
+      width: 150px;
+      height: 150px;
+      background: url(img/clock.png) no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3.2px solid #091921;
+      border-radius: 50%;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3),
+                  inset -8px -8px 15px rgba(255, 255, 255, 0.05),
+                  inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.clock::before{
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #2196f3;
+      z-index: 10000;
+      border-radius: 50%;
+}
+
+.hour,
+.min,
+.sec{
+      position: absolute;
+}
+
+.clock .hour, .hr{
+      width: 100px;
+      height: 60px;
+}
+
+.clock .min, .mn{
+      width: 100px;
+      height: 80px;
+}
+
+.clock .sec, .sc{
+      width: 100px;
+      height: 5px;
+}
+
+.hr, .mn, .sc{
+      display: flex;
+      justify-content: center;
+      position: absolute;
+}
+
+.hr::before{
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 30px;
+      background: indianred;
+      border-radius: 6px 6px 0 0;
+}
+
+.mn::before{
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 40px;
+      background: rgb(0, 255, 178);
+      border-radius: 6px 6px 0 0;
+}
+
+.sc::before{
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 50px;
+      background: #2196f3;
+      border-radius: 6px 6px 0 0;
+}
+
+#digitalClock{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 4em;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.109));
+}
+@font-face{
+      font-family: 'time';
+      src: url(fonts/Metropolis/Metropolis-BlackItalic.otf);
+}
+
+#hour, #minutes, #seconds, #ampm{
+      color: rgba(205, 92, 92, 0.76);
+      font-size: 30px;
+      font-family: 'time';
+      letter-spacing: 2px;
+}
+
+#hour:hover, #minutes:hover, #seconds:hover, #ampm:hover{
+      transform: scale(1.2);
+      cursor: pointer;
+      transition: transform .5s ease;
+}
+#hour::selection, #minutes::selection, #seconds::selection, #ampm::selection{
+      background: transparent;
+}
+
+
+@media screen and (max-width: 1080px){
+      #hour, #minutes, #seconds, #ampm{
+            font-size: 20px;
+      }
+}

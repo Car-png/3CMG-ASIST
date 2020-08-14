@@ -4,35 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AV-3CMG</title>
-
     <link rel="stylesheet" href="style.css">
-
     <link rel="shortcut icon" href="img/TheLast.png">
+    <link rel="stylesheet" href="TimeAndClock.css">
 
+    <!-- Librerias de Javascript importantes -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/annyang.min.js"></script>
-
 </head>
 <body>
+		<!-- Logo de la Pàgina -->
+		<img class="T-Logo" src="img/TheLast.png" alt="TheLast Team Logo">
+		<!-- fin logo -->
 
-    <img class="logo" src="img/TheLast.png">
+
+
+	<!--! Contenedor General -->
+		<div class="container">
+
+		<!--TODO Contenedor Descripciòn -->
+			<div class="cont-Description">
+
+				<div class="letter">
+					<h1>Descripción:</h1>
+					<p>Esta página web contiene un Asistente Virtual que le ayudará a navegar por los sitios que usted desee.</p>
+				</div>
+
+				<div class="time">
+
+					<div class="clock">
+                        <div class="hour">
+                            <div class="hr" id="hr"></div>
+                        </div>
+
+                        <div class="min">
+                            <div class="mn" id="mn"></div>
+                        </div>
+
+                        <div class="sec">
+                            <div class="sc" id="sc"></div>
+                        </div>
+					</div>
+
+                </div>
+                
+			</div>
+		<!--TODO fin Descripciòn-->
+
+
+
+		<!--* Contenedor Interacciòn -->
+			<div class="cont-Middle">
+					<h1>Bienvenid@</h1>
+
+					<div class="form">
+						<div class="up">
+							<label class="lbl-escucho">Te escucho:</label>
+							<input type="text" class="txt-respuesta" id="txt" disabled>
+						</div>
+
+						<div class="down">
+							<label>Has dicho:</label>
+							<textarea class="txt-area" id="texto" cols="30" rows="10"  disabled></textarea>
+						</div>
+
+						<div class="btn">
+							<a class="Copiar" id="copiar">copiar</a>
+						</div>
+					</div>
+			</div>
+		<!--* fin Interacciòn-->
+
+
+
+		<!-- ?Contenedor Manual -->
+			<div class="cont-Manual">
+
+				<div class="words">
+					<h1>Instrucciones:</h1>
+					<p>Estas son los siguientes comandos de voz que usted tiene que decir para que el Asistente Virtual le ayude.</p>
+				</div>
+
+				<div class="hours">
+					<div id="digitalClock">
+                        <div id="hour"></div>
+                        <div id="minutes"></div>
+                        <div id="seconds"></div>
+                        <div id="miliS"></div>
+                        <div class="" id="ampm"></div>
+					</div>
+				</div>
+				
+			</div>				
+		<!-- ?fin Manual-->
+
+		</div>
+    <!-- !fin General-->
     
-    <div class="cont">
 
-        <div class="box1">
-            <a class="btnS" id="b" href="VozText.html">Transcribir de voz a texto</a>
-        </div>
 
-        <a href="bat/Apagar.bat" id="batA"></a>
-        <a href="bat/Restart.bat" id="batR"></a>
-        <a href="bat/CancelarShut.bat" id="batC"></a>
 
-        <input type="text" id="txt" class="txt" placeholder="Te escucho">
-
-        
-    </div>
-
+    <!-- Logica -->
     <script src="js/AV-3CMG.js"></script>
-    <script src="js/hablar.js"></script>
+    <script src="js/voztext.js"></script>
+    <script src="js/copiar.js"></script>
+    <script src="js/Hover.js"></script>
+    <script src="js/TimeClock.js"></script>
 </body>
 </html>
