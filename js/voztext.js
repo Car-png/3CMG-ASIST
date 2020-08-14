@@ -3,7 +3,7 @@ if (!('webkitSpeechRecognition'in window)){
     alert('Error');
 }else{
     rec = new webkitSpeechRecognition();
-    rec.lang = "es-AR";
+    rec.lang = "es-ES";
     rec.continuous = true;
     rec.interim = true;
     rec.addEventListener("result", ejecutar);
