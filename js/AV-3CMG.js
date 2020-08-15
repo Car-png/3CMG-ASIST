@@ -34,15 +34,19 @@ if(annyang){
             window.speechSynthesis.speak(utter);
 
             document.getElementById('txt').innerHTML="Googleando"+$('#txt').val(valor);
+            document.getElementById('texto').innerHTML="Googleando "+$('#texto').val(valor);
 
             window.open('https://www.google.com/search?sxsrf=ALeKk02R3u6nWG1-FvkdLQFKMlHZOGg36Q%3A1590901089781&source=hp&ei=YTnTXsO-LbvQ5OUPibiA6Ao&q='+valor+'','_blank');
         },
+
         'youtube': function(){
             utter.text = 'Visitando youtube';
             utter.voice = voices[7];
             window.speechSynthesis.speak(utter);
 
             document.getElementById('txt').innerHTML="Visitando youtube";
+            document.getElementById('texto').innerHTML="Visitando youtube";
+
             window.open('https://www.youtube.com/','_blank');
         },
 
@@ -55,22 +59,14 @@ if(annyang){
             window.open('https://www.youtube.com/results?search_query='+valor+'','_blank');
         },
 
-        'adios youtube':function(){
-            utter.text = 'Hasta luego';
-            utter.voice = voices[7];
-            window.speechSynthesis.speak(utter);
-
-            window.close('https://www.youtube.com/');
-        },
-
         'ir a *valor': function (valor) {
             utter.text = 'Dirigiendo a'+valor;
             utter.voice = voices[7];
             window.speechSynthesis.speak(utter);
 
             document.getElementById('txt').innerHTML="Visitando "+$('#txt').val(valor);
+            document.getElementById('texto').innerHTML="Visitando "+$('#texto').val(valor);
             window.open('https://www.'+valor+'.com/','_blank');
-            
         }
 
     };
